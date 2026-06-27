@@ -102,60 +102,6 @@ DentalFX_Finalizado/
 └── README.md
 ```
 
-## 🚀 Como Executar
-
-### 1. Pré-requisitos
-
-- JDK compatível com o `pom.xml`.
-- PostgreSQL instalado.
-- Maven Wrapper do próprio projeto.
-
-### 2. Configurar o Banco
-
-Crie o banco:
-
-```powershell
-createdb -U postgres sisdentaldb
-```
-
-Importe o script:
-
-```powershell
-psql -U postgres -d sisdentaldb -f sisdentaldb.sql
-```
-
-Configure as variáveis de ambiente conforme seu PostgreSQL:
-
-```powershell
-$env:DENTALFX_DB_HOST="localhost"
-$env:DENTALFX_DB_PORT="5432"
-$env:DENTALFX_DB_NAME="sisdentaldb"
-$env:DENTALFX_DB_USER="postgres"
-$env:DENTALFX_DB_PASSWORD="sua_senha"
-```
-
-Também é possível usar propriedades do Java:
-
-```powershell
-.\mvnw.cmd javafx:run -Ddentalfx.db.user=postgres -Ddentalfx.db.password=sua_senha
-```
-
-### 3. Rodar a Aplicação
-
-```powershell
-.\mvnw.cmd clean javafx:run
-```
-
-## 🔐 Contas de Demonstração
-
-O script `sisdentaldb.sql` inclui usuários de exemplo:
-
-| Usuário | Senha | Nível |
-|---|---|---|
-| `admin` | `admin` | Administrador |
-| `secretaria` | `secret` | Secretaria |
-| `Dra Ana` | `dentista` | Dentista |
-
 ## 📊 Relatórios
 
 O sistema possui relatórios gerados com **JasperReports**:
@@ -182,11 +128,3 @@ Isso mantém o repositório focado no que importa para avaliação técnica:
 - Script de banco.
 - Relatórios Jasper.
 - Documentação.
-
-## 🔮 Melhorias Futuras
-
-- Envio automático de e-mail para lembrete de consultas.
-- Hash de senha para usuários.
-- Validações mais completas de CPF, CRO e horários.
-- Testes automatizados para regras de agenda e atendimento.
-- Empacotamento da aplicação desktop para instalação.
