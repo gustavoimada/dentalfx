@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="276.0" prefWidth="628.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unoeste.fipp.dentalfx.PacienteFormController">
+   <children>
+      <VBox prefHeight="219.0" prefWidth="628.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label text="ID:">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfID" disable="true" editable="false" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="10.0" layoutY="10.0" text="Nome:">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfNome" layoutX="10.0" layoutY="27.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="10.0" layoutY="57.0" text="CPF:">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfCPF" layoutX="10.0" layoutY="74.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="154.0" text="CEP:">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfCEP" layoutX="20.0" layoutY="171.0" onKeyTyped="#onBuscarCep" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="196.0" text="Cidade:">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfCidade" layoutX="20.0" layoutY="213.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="238.0" text="Bairro:">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfBairro" layoutX="20.0" layoutY="255.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="280.0" text="Rua:">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfRua" layoutX="20.0" layoutY="297.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="322.0" text="Numero:">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfNumero" layoutX="20.0" layoutY="339.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="364.0" text="UF:">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfUF" layoutX="20.0" layoutY="381.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="406.0" text="Email:">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfEmail" layoutX="20.0" layoutY="423.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="448.0" text="Telefone:">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfTelefone" layoutX="20.0" layoutY="465.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="490.0" text="Historico">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfHistorico" layoutX="20.0" layoutY="507.0" prefHeight="57.0" prefWidth="608.0" style="-fx-background-radius: 7; -fx-border-radius: 7;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="628.0" spacing="32.0" style="-fx-background-color: #e7ecef; -fx-background-radius: 10 10 0 0;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onConfirmar" prefHeight="28.0" prefWidth="120.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" text="Confirmar" />
+            <Button mnemonicParsing="false" onAction="#onCancelar" prefHeight="28.0" prefWidth="120.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" text="Cancelar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

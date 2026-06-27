@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Ajuda - Módulo Dentista (Nível 3) - DentalFX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary-color: #007bff; /* Azul primário */
+            --secondary-color: #6c757d; /* Cinza secundário */
+            --background-color: #f8f9fa; /* Fundo leve */
+            --sidebar-bg: #343a40; /* Fundo escuro para sidebar */
+            --sidebar-hover: #495057; /* Hover da sidebar */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+        }
+
+        /* Style the side navigation */
+        .sidenav {
+            height: 100%;
+            width: 250px; /* Largura ajustada */
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: var(--sidebar-bg);
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* Side navigation links */
+        .sidenav a {
+            color: white;
+            padding: 18px 25px; /* Padding ajustado */
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            border-bottom: 1px solid #495057;
+            transition: background-color 0.3s;
+        }
+
+        /* Change color on hover */
+        .sidenav a:hover {
+            background-color: var(--sidebar-hover);
+            color: #fff;
+        }
+
+        /* Título do Menu */
+        .sidenav h3 {
+            color: #fff;
+            padding: 0 25px 15px;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--primary-color);
+            margin: 0 0 15px 0;
+        }
+
+
+        /* Style the content */
+        .content {
+            margin-left: 250px; /* Margem igual à largura da sidebar */
+            padding: 40px;
+        }
+
+        .content h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #555;
+            margin-top: 30px;
+        }
+
+        .alert {
+            padding: 15px;
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidenav">
+    <h3>Módulo Dentista (Nível 3)</h3>
+    <a href="#fluxo">Fluxo de Registro de Atendimento</a>
+    <a href="#relato">Relato e Observações</a>
+    <a href="#procedimentos">Registro de Procedimentos</a>
+    <a href="#materiais">Registro de Materiais</a>
+    <a href="#finalizacao">Finalizando a Consulta</a>
+</div>
+
+<div class="content">
+
+    <div class="alert">
+        <strong>Manual de Acompanhamento de Consulta:</strong> Este guia é destinado a usuários com Nível de Acesso 3 (Dentistas) e detalha como registrar um atendimento no sistema DentalFX.
+    </div>
+
+    <h2 id="fluxo">Fluxo de Registro de Atendimento</h2>
+    <p>A tela **Registrar Atendimento** é o ambiente onde o dentista formaliza a consulta, preenchendo o histórico e o consumo, garantindo que o atendimento seja marcado como "Efetivado" e as informações sejam salvas no banco de dados.</p>
+
+    <h3>1. Acessando sua Agenda:</h3>
+    <p>Ao acessar o sistema, você verá a agenda do dia na área esquerda.</p>
+    <ul>
+        <li>O calendário permite selecionar o dia desejado.</li>
+        <li>A tabela exibe a **Hora** e o **Paciente** agendado para o seu horário.</li>
+        <li>Selecione o paciente que está sendo atendido para carregar a ficha de registro.</li>
+    </ul>
+
+    ---
+
+    <h2 id="relato">Relato e Observações</h2>
+    <p>O **Relato Textual** é a primeira e mais importante parte do registro, onde você documenta o que ocorreu durante a consulta.</p>
+
+    <ul>
+        <li>Utilize a caixa de texto grande (Observações sobre a consulta) para registrar o relato do atendimento.</li>
+        <li>Este campo aceita texto livre. Seja específico sobre diagnósticos, estado do paciente e ações realizadas.</li>
+    </ul>
+
+    ---
+
+    <h2 id="procedimentos">Registro de Procedimentos</h2>
+    <p>Aqui você registra todos os procedimentos que foram realizados no paciente (ex: Limpeza).</p>
+
+    <h3>Passos:</h3>
+    <ol>
+        <li>Selecione o procedimento na lista suspensa (**ComboBox Procedimento**).</li>
+        <li>Clique no botão **+** (adicionar) ou ajuste a quantidade, se necessário.</li>
+        <li>A tabela abaixo (**Procedimento / Quant**) listará os itens adicionados.</li>
+        <li>O sistema armazena o procedimento e a quantidade na tabela `cons_proc`.</li>
+    </ol>
+
+    ---
+
+    <h2 id="materiais">Registro de Materiais</h2>
+    <p>É obrigatório registrar os **Materiais** consumidos para que o controle de estoque e custos da clínica seja preciso.</p>
+
+    <h3>Passos:</h3>
+    <ol>
+        <li>Selecione o material (ex: Algodão) na lista suspensa (**ComboBox Material**).</li>
+        <li>Ajuste a quantidade consumida usando os botões **+** (aumentar) ou **-** (diminuir), ou editando diretamente na tabela.</li>
+        <li>A tabela abaixo (**Material / Quant**) listará os itens.</li>
+        <li>O sistema armazena o material e a quantidade na tabela `cons_mat`.</li>
+    </ol>
+
+    ---
+
+    <h2 id="finalizacao">Finalizando a Consulta</h2>
+    <p>Após preencher o relato, procedimentos e materiais, a consulta pode ser finalizada.</p>
+
+    <ul>
+        <li>Clique no botão **Confirmar**.</li>
+        <li>Esta ação salva todas as informações e marca a consulta como **con_efetivado = true**, indicando que o atendimento foi concluído.</li>
+        <li>Se precisar sair sem salvar, clique em **Cancelar**.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

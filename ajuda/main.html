@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Ajuda e Tutoriais - DentalFX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary-color: #007bff; /* Azul primário */
+            --secondary-color: #6c757d; /* Cinza secundário */
+            --background-color: #f8f9fa; /* Fundo leve */
+            --sidebar-bg: #343a40; /* Fundo escuro para sidebar */
+            --sidebar-hover: #495057; /* Hover da sidebar */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+        }
+
+        /* Style the side navigation */
+        .sidenav {
+            height: 100%;
+            width: 250px; /* Largura ajustada */
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: var(--sidebar-bg);
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* Side navigation links */
+        .sidenav a {
+            color: white;
+            padding: 18px 25px; /* Padding ajustado */
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            border-bottom: 1px solid #495057;
+            transition: background-color 0.3s;
+        }
+
+        /* Change color on hover */
+        .sidenav a:hover {
+            background-color: var(--sidebar-hover);
+            color: #fff;
+        }
+
+        /* Título do Menu */
+        .sidenav h3 {
+            color: #fff;
+            padding: 0 25px 15px;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--primary-color);
+            margin: 0 0 15px 0;
+        }
+
+
+        /* Style the content */
+        .content {
+            margin-left: 250px; /* Margem igual à largura da sidebar */
+            padding: 40px;
+        }
+
+        .content h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #555;
+            margin-top: 30px;
+        }
+
+        .alert {
+            padding: 15px;
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidenav">
+    <h3>Módulos do DentalFX</h3>
+    <a href="#relatorios">Relatórios Gerenciais</a>
+    <a href="#cad_paciente">Cadastro de Pacientes</a>
+    <a href="#cad_dentista">Cadastro de Dentistas e Usuários</a>
+    <a href="#cad_proc_mat">Procedimentos e Materiais</a>
+    <a href="#backup">Backup e Restore</a>
+</div>
+
+<div class="content">
+
+    <div class="alert">
+        <strong>Manual de Ajuda do DentalFX:</strong> Este sistema informatiza o agendamento e o acompanhamento de consultas em clínicas de odontologia.
+    </div>
+
+    <h2 id="relatorios">Relatórios Gerenciais</h2>
+    <p>O DentalFX oferece relatórios para monitoramento e gestão, focados em listas básicas de cadastros e análises de desempenho dos atendimentos.</p>
+
+    <h3>Tipos de Relatórios:</h3>
+    <ol>
+        <li>**Relatórios Básicos:** Listagens simples como a Relação de Pacientes, Relação de Materiais, Relação de Procedimentos e a Agenda do Dia.</li>
+        <li>**Relatórios Analíticos:** Permitem gerar a Relação de Atendimentos Realizados, utilizando filtros por **faixa de datas** e/ou por **Dentista** específico.</li>
+        <li>**Ficha do Paciente:** Emissão impressa de todos os dados cadastrais do paciente, incluindo o histórico completo de todos os atendimentos já realizados.</li>
+    </ol>
+
+    ---
+
+    <h2 id="cad_paciente">Cadastro de Pacientes</h2>
+    <p>O cadastro de pacientes exige o registro de informações detalhadas essenciais para o agendamento e o histórico clínico.</p>
+
+    <h3>Dados Obrigatórios:</h3>
+    <ul>
+        <li>Código sequencial, CPF, Nome e Email.</li>
+        <li>Endereço Completo (Rua, Número, Bairro, CEP).</li>
+        <li>Telefone e Histórico Clínico (problemas de saúde ou intolerância a medicamentos).</li>
+    </ul>
+
+    ---
+
+    <h2 id="cad_dentista">Cadastro de Dentistas e Usuários</h2>
+    <p>O sistema exige cadastros distintos para a identificação do profissional e para o acesso ao aplicativo.</p>
+
+    <h3>Cadastro de Dentistas:</h3>
+    <p>Registra o nome, CRO, telefone e email do profissional, vinculando-o a uma agenda.</p>
+
+    <h3>Cadastro de Usuário:</h3>
+    <p>Define as credenciais de acesso ao sistema:</p>
+    <ul>
+        <li>**Nome de Usuário** e **Senha**.</li>
+        <li>**Nível de Acesso:** 1 (acesso irrestrito/Admin), 2 (cadastros e agendamento/Secretaria), 3 (acesso do dentista).</li>
+    </ul>
+
+    ---
+
+    <h2 id="cad_proc_mat">Cadastro de Procedimentos e Materiais</h2>
+    <p>Esses cadastros alimentam a tela de Acompanhamento de Consulta e são cruciais para o registro de consumo e custos.</p>
+
+    <h3>Procedimentos:</h3>
+    <p>Deve conter o código, descrição, preço e o **tempo médio de execução**.</p>
+
+    <h3>Materiais:</h3>
+    <p>Deve conter o código, descrição e preço.</p>
+
+    ---
+
+    <h2 id="backup">Realizando Backup e Restore</h2>
+    <p>O Administrador deve utilizar esta funcionalidade para garantir a segurança dos dados do sistema. O backup cria uma cópia de segurança do banco de dados, que pode ser restaurada em caso de perda de dados. Recomenda-se a execução regular do backup.</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="rel_agenda_dia" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="db8bd8cb-0bae-4bbd-97b9-c200fa55247a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<query language="SQL"><![CDATA[SELECT
+  8 AS horario,                     
+  'Nome do Paciente' AS pac_nome,
+  'Nome do Dentista' AS den_nome,
+  'Status do Atendimento' AS status 
+FROM
+  consulta
+LIMIT 1]]></query>
+	<field name="horario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="horario"/>
+		<property name="com.jaspersoft.studio.field.label" value="horario"/>
+	</field>
+	<field name="pac_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pac_nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="pac_nome"/>
+	</field>
+	<field name="den_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="den_nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="den_nome"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+	</field>
+	<background/>
+	<title height="50">
+		<element kind="frame" uuid="dcf597b9-0f07-488e-b39d-d50bbb50f2fb" mode="Opaque" x="-20" y="-20" width="595" height="70" backcolor="#006699">
+			<element kind="staticText" uuid="daf0752c-a510-4bdd-96e2-66dc76d76e9a" x="10" y="10" width="234" height="43" forecolor="#FFFFFF" fontSize="34.0" bold="true">
+				<text><![CDATA[DentalFX]]></text>
+			</element>
+			<element kind="staticText" uuid="dcde5095-e39a-4a31-8744-70ab65248b2f" x="380" y="10" width="180" height="42" forecolor="#FFFFFF" fontSize="16.0" bold="true" hTextAlign="Right">
+				<text><![CDATA[Agenda do Dia]]></text>
+				<box topPadding="9"/>
+			</element>
+		</element>
+	</title>
+	<pageHeader/>
+	<columnHeader height="21">
+		<element kind="staticText" uuid="c23367c1-9f5e-49ec-a0ba-cc8aa08206c0" mode="Opaque" x="0" y="0" width="100" height="20" forecolor="#006699" backcolor="#FFFFFF" fontSize="14.0" bold="true" hTextAlign="Left">
+			<text><![CDATA[Horário]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="515881ee-f523-46e1-a9e3-99b78eca684c"/>
+		</element>
+		<element kind="staticText" uuid="17f9b8fa-39a0-414d-ac6c-78846220b34d" mode="Opaque" x="100" y="0" width="160" height="20" forecolor="#006699" backcolor="#FFFFFF" fontSize="14.0" bold="true" hTextAlign="Left">
+			<text><![CDATA[Paciente]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bc541e1-0136-46b3-84ae-baf67722abf9"/>
+		</element>
+		<element kind="staticText" uuid="cdb6991b-5057-4865-befd-9e759e81b826" mode="Opaque" x="260" y="0" width="154" height="20" forecolor="#006699" backcolor="#FFFFFF" fontSize="14.0" bold="true" hTextAlign="Left">
+			<text><![CDATA[Dentista]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="33002f0d-4a88-43a3-8147-d4bf19c7bef3"/>
+		</element>
+		<element kind="staticText" uuid="c2495849-3fc2-47e0-a88a-b79c3fefcd6a" mode="Opaque" x="414" y="0" width="138" height="20" forecolor="#006699" backcolor="#FFFFFF" fontSize="14.0" bold="true" hTextAlign="Left">
+			<text><![CDATA[Status]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b4ae7c76-0f6f-49f3-b9d6-2a614f3acfcf"/>
+		</element>
+		<element kind="line" uuid="c4a3ab77-9332-400f-bf99-671873354a7a" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<element kind="textField" uuid="46902b15-426c-41af-8968-ef4133626f82" x="0" y="0" width="100" height="20" fontSize="14.0" textAdjust="StretchHeight">
+				<expression><![CDATA[$F{horario}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="515881ee-f523-46e1-a9e3-99b78eca684c"/>
+			</element>
+			<element kind="textField" uuid="bf181dc0-a44a-43ae-9871-f4b1d630adc0" x="100" y="-1" width="160" height="20" fontSize="14.0" textAdjust="StretchHeight">
+				<expression><![CDATA[$F{pac_nome}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bc541e1-0136-46b3-84ae-baf67722abf9"/>
+			</element>
+			<element kind="textField" uuid="50648391-b3bf-4084-93be-79ef3639ecb4" x="260" y="-1" width="154" height="20" fontSize="14.0" textAdjust="StretchHeight">
+				<expression><![CDATA[$F{den_nome}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="33002f0d-4a88-43a3-8147-d4bf19c7bef3"/>
+			</element>
+			<element kind="textField" uuid="7a01eccb-9598-4380-a568-f35e91507073" x="414" y="0" width="138" height="20" fontSize="14.0" textAdjust="StretchHeight">
+				<expression><![CDATA[$F{status}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b4ae7c76-0f6f-49f3-b9d6-2a614f3acfcf"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter/>
+	<pageFooter height="17">
+		<element kind="textField" uuid="8bc803d3-5c88-43bd-8b97-0aae1c35d32a" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" hTextAlign="Right">
+			<expression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></expression>
+		</element>
+		<element kind="textField" uuid="d76bc932-8fb2-4801-90d3-71649684b451" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" evaluationTime="Report">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="2e3bf188-ec8b-4f24-9f63-7b2eeaeb993c" x="0" y="4" width="100" height="13" pattern="d 'de' MMM 'de' yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary/>
+</jasperReport>

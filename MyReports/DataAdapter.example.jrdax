@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl">
+	<name>dentalDB</name>
+	<driver>org.postgresql.Driver</driver>
+	<username>postgres</username>
+	<password></password>
+	<url>jdbc:postgresql://localhost:5432/sisdentaldb</url>
+	<database></database>
+	<savePassword>false</savePassword>
+	<serverAddress></serverAddress>
+</jdbcDataAdapter>
