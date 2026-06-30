@@ -1,5 +1,16 @@
 # 🦷 DentalFX
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen" />
+  <img src="https://img.shields.io/badge/Language-Java-red" />
+  <img src="https://img.shields.io/badge/Desktop-JavaFX-orange" />
+  <img src="https://img.shields.io/badge/Build-Maven-blue" />
+  <img src="https://img.shields.io/badge/Database-PostgreSQL-336791" />
+  <img src="https://img.shields.io/badge/Reports-JasperReports-purple" />
+  <img src="https://img.shields.io/badge/PDF-iText-black" />
+  <img src="https://img.shields.io/badge/App-Dental%20Clinic%20Management-00AEEF" />
+</p>
+
 O **DentalFX** é um sistema desktop em **JavaFX** para agendamento e acompanhamento de consultas em clínicas odontológicas. A aplicação permite cadastrar pacientes, dentistas, usuários, procedimentos e materiais, além de organizar agendas por profissional e registrar o atendimento realizado.
 
 Este projeto foi desenvolvido como trabalho bimestral acadêmico, mas está estruturado para demonstrar evolução técnica em um cenário mais completo que um CRUD simples: interface desktop, banco relacional, regras de agenda, níveis de acesso, relatórios e geração de PDF.
